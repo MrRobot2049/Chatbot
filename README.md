@@ -9,7 +9,7 @@ To integrate google translate api, you have to follow the steps given below: <br
 4.Configure environmental variables <br>
 5.Install google-cloud-translate. <br>
 Optional <br>
-Set up a virtual environment while doing the project. <br>
+Set up a virtual environment(recommended). <br>
 
 **Usage** <br>
 I recommend once looking through rasa documentation. It will provide you with an understanding of how the project works.For using the chatbot you can go through the following steps: <br>
