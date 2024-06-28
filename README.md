@@ -12,7 +12,7 @@ Optional <br>
 Set up a virtual environment(recommended). <br>
 
 **Usage** <br>
-I recommend once looking through rasa documentation. It will provide you with an understanding of how the project works.For using the chatbot you can go through the following steps: <br>
+I recommend once going through rasa documentation. It will provide you with an understanding of how the project works.For using the chatbot you can go through the following steps: <br>
 Run the following commands in two separate terminal windows: <br>
 -rasa run --cors "*" <br>
 -rasa run actions <br>
