@@ -57,7 +57,7 @@
             const userInput = document.getElementById('user-input').value;
             if (!userInput) return;
 
-            // Add user's message to chat
+            //To take the input from user
             const chatContainer = document.getElementById('chat-container');
             const userMessage = document.createElement('div');
             userMessage.classList.add('message', 'user-message');
@@ -65,7 +65,7 @@
             chatContainer.appendChild(userMessage);
             chatContainer.scrollTop = chatContainer.scrollHeight;
 
-            // Send message to Rasa server
+            // Sending the message to rasa server
             const response = await fetch('http://localhost:5005/webhooks/rest/webhook', {
                 method: 'POST',
                 headers: {
@@ -74,7 +74,7 @@
                 body: JSON.stringify({ message: userInput }),
             });
 
-            // Get bot's response and add it to chat
+            // Receiving the message from the bot, then displaying on the screen.
             const data = await response.json();
             data.forEach(message => {
                 const botMessage = document.createElement('div');
@@ -84,7 +84,7 @@
                 chatContainer.scrollTop = chatContainer.scrollHeight;
             });
 
-            // Clear the input field
+            // To clear input taken so that the process continues
             document.getElementById('user-input').value = '';
         }
     </script>
