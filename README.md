@@ -1,27 +1,148 @@
-**Project title** - **"Cheeku the chatbot"** <br>
-Description: It is a chatbot designed to provide the user meanings, synonyms of words and translations of phrases.
 
-**Installation** <br>
-To integrate google translate api, you have to follow the steps given below: <br>
-1.Install google cloud sdk <br>
-2.Enable google translate api <br>
-3.Set up authentication(I used service accounts, you have to change the code a little bit in actions.py if you are going to use another method) <br>
-4.Configure environmental variables <br>
-5.Install google-cloud-translate. <br>
-Optional <br>
-Set up a virtual environment(recommended). <br>
+# 🤖 Cheeku – The Intelligent Word & Phrase Assistant
 
-**Usage** <br>
-I recommend once going through rasa documentation. It will provide you with an understanding of how the project works.For using the chatbot you can go through the following steps: <br>
-Run the following commands in two separate terminal windows: <br>
--rasa run --cors "*" <br>
--rasa run actions <br>
-Then open the html file linked to the project. Chatbot will be up and running in the default web browser. <br>
+**Cheeku** is a smart chatbot built to help users understand language better. It can:
+- 🔍 Provide **meanings** of English words  
+- 🔄 Suggest **synonyms**  
+- 🌐 Translate **phrases** into multiple languages
+
+Built with 💡 simplicity and 💬 interactivity in mind, Cheeku is a perfect mini NLP project for learners and curious minds alike.
+
+---
+
+## 🚀 Features
+
+- 📖 **Word Definitions** – Get accurate English meanings.
+- 🧠 **Synonym Suggestions** – Find alternative words instantly.
+- 🌍 **Translation Support** – Translate phrases using Google Translate API.
+- ✅ **Interactive Command-line Interface** – Lightweight and fast.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Language**: Python 🐍
+- **APIs**: Google Translate API, Dictionary API (e.g., Free Dictionary API)
+- **Libraries**: `requests`, `json`, `googletrans` (or similar), `termcolor` for CLI aesthetics
+
+---
+
+## 📦 Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/cheeku-chatbot.git
+   cd cheeku-chatbot
 
 
-**Contributions** <br>
-If you are open to contributions, I would suggest the following: <br>
--Train more data in nlu.yml <br>
--Integrate text to speech google api so that pronunciation of words can be done <br>
--There is a scope of improvement in the frontend development of website <br>
+2. **Install dependencies**
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **(Optional)** Set up API keys if required (some dictionary APIs need it):
+
+   * Create a `.env` file or export environment variables:
+
+     ```bash
+     export DICTIONARY_API_KEY=your_key_here
+     ```
+
+---
+
+## ▶️ Usage
+
+Run the chatbot using:
+
+```bash
+python cheeku.py
+```
+
+Then type:
+
+* `meaning <word>` – to get definitions
+* `synonym <word>` – to get synonyms
+* `translate <phrase> to <language>` – to translate (e.g., `translate hello world to Hindi`)
+
+Example:
+
+```
+> meaning ephemeral
+"Ephemeral" means lasting for a very short time.
+
+> synonym happy
+Synonyms for happy: joyful, cheerful, delighted, content
+
+> translate good morning to Spanish
+Buenos días
+```
+
+---
+
+## 📁 Project Structure
+
+```
+cheeku-chatbot/
+├── cheeku.py
+├── utils/
+│   ├── dictionary.py
+│   ├── translator.py
+│   └── synonym.py
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## 🌍 Supported Languages
+
+Cheeku can translate to and from a wide range of languages including:
+
+* Hindi
+* Spanish
+* French
+* German
+* Japanese
+* Tamil
+* Bengali
+* And many more...
+
+---
+
+## 📌 Future Enhancements
+
+* [ ] Add voice input/output
+* [ ] Add GUI (using Tkinter or Streamlit)
+* [ ] Telegram bot integration
+* [ ] Autocorrect & spelling suggestion
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork the repo
+2. Create a new branch (`git checkout -b feature-name`)
+3. Commit your changes
+4. Push and open a Pull Request
+
+---
+
+## 📜 License
+
+MIT License © Goutham Naroju
+This project is open-source and free to use.
+
+---
+
+## 🙌 Acknowledgements
+
+* [Google Translate API](https://cloud.google.com/translate/)
+* [Free Dictionary API](https://dictionaryapi.dev/)
+* [Python Requests Library](https://docs.python-requests.org/)
+
+```
+
 
